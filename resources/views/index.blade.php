@@ -1,19 +1,5 @@
-<!DOCTYPE html>
-<html>
-<body>
+@extends('layouts.helloapp')
 
-<h1>Blade/Index</h1>
+@section('title', 'Index')
 
-@if ($msg != '')
-<p>Hello, {{$msg}}</p>
-@else 
-<p>write something</p>
-@endif
 
-<form method="POST" action="/hello">
-@csrf
-<input type="text" name="msg">
-<input type="submit">
-</form>
-</body>
-</html>

@@ -3,7 +3,7 @@
 <head>
 <title>@yield('title')</title>
 <style>
-body{color:#999;}
+body{background-color:gray;}
 </style>
 </head>
 <body>
