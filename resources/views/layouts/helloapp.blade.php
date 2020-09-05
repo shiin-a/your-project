@@ -3,7 +3,12 @@
 <head>
 <title>@yield('title')</title>
 <style>
-body{background-color:gray;}
+body{
+background-color:gray;
+}
+.content{
+background-color:blue;
+}
 </style>
 </head>
 <body>
@@ -12,6 +17,9 @@ body{background-color:gray;}
 
 <p>My first paragraph.</p>
 
+<div class="content">
+@yield('content')
+</div>
 </body>
 </html>
 
