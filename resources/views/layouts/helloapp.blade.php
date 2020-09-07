@@ -6,20 +6,29 @@
 body{
 background-color:gray;
 }
-.content{
-background-color:blue;
+
+.paragraph{
+background-color:white;
 }
 </style>
 </head>
 <body>
 
-<h1>@yield('title')</h1>
+<h3>@yield('title')</h3>
 
-<p>My first paragraph.</p>
-
-<div class="content">
-@yield('content')
+<div class="paragraph">
+@yield('introduction')
 </div>
+
+<div class="paragraph">
+@yield('body')
+</div>
+
+<div class="paragraph">
+@yield('conclusion')
+</div>
+
+
 </body>
 </html>
 

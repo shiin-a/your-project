@@ -13,5 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('hello',  'HelloController@index');
-Route::post('hello',  'HelloController@post');
+Route::get('hamster',  'HamsterController@index');
+Route::get('hamster-ja',  'HamsterController@indexja');
+
+
