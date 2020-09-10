@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Middleware\HelloMiddleware;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('hamster',  'HamsterController@index');
-Route::get('hamster-ja',  'HamsterController@indexja');
+Route::get('hello',  'HelloController@index')
+	->middleware(HelloMiddleware::class);
 
 
