@@ -17,16 +17,10 @@ background-color:white;
 <h3>@yield('title')</h3>
 
 <div class="paragraph">
-@yield('introduction')
+@yield('content')
 </div>
 
-<div class="paragraph">
-@yield('body')
-</div>
 
-<div class="paragraph">
-@yield('conclusion')
-</div>
 
 
 </body>
