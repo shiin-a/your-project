@@ -18,11 +18,16 @@
 	</ul>
 </div>
 @endif
+
 <form action="/hello" method="post">
 
 <table>
 
     @csrf
+	@error('name')
+	  <p>error in 'name'</p>
+	@enderror
+
 
     <tr><th>name: </th><td><input type="text" name="name">
 
@@ -32,6 +37,9 @@
 
     </td></tr>
 
+	@error('age')
+	  <p>error in 'age'</p>
+	@enderror
     <tr><th>age: </th><td><input type="text" name="age">
 
     </td></tr>
