@@ -2,6 +2,8 @@
 
 namespace App\Http\Middleware;
 
+require_once __DIR__  ."/../Requests/HelloRequest.php";
+use App\Http\Request\HelloRequest;
 use Closure;
 
 class HelloMiddleware
