@@ -14,7 +14,7 @@ class HelloController extends Controller
 	}
 
 	public function post(HelloRequest $request)
-	{ 
+	{
 		return view('hello.index', ['msg'=>'正しく入力されました。']);
 	}
 }
