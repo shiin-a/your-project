@@ -9,12 +9,13 @@ use App\Http\Requests\HelloRequest;
 class HelloController extends Controller
 {
 	public function index(Request $request){
- 
+		echo "Controller@index<br />"; 
 		return view('hello.index', ['msg'=>'フォームを入力.']);
 	}
 
 	public function post(HelloRequest $request)
 	{
+		echo "Controller@post<br />"; 
 		return view('hello.index', ['msg'=>'正しく入力されました。']);
 	}
 }

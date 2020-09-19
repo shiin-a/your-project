@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+echo "web.php<br />";
 Route::get('hello',  'HelloController@index');
 Route::post('hello',  'HelloController@post');
 

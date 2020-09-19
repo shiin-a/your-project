@@ -16,7 +16,7 @@ class HelloMiddleware
      */
     public function handle($request, Closure $next)
     {
-
+echo "middleware<br />";
         $response = $next($request);
         $content = $response->content();
         $pattern = '/<middleware>(.*)<\/middleware>/i';
