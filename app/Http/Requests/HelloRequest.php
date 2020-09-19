@@ -29,6 +29,7 @@ class HelloRequest extends FormRequest
 	public function rules()
 	{
 	echo 'HelloRequest@rules<br />';
+
 		return [
 		   'name' => 'required', 
 		   'age' => 'numeric|between:0,150',
