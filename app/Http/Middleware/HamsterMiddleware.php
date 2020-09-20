@@ -2,10 +2,9 @@
 
 namespace App\Http\Middleware;
 
-use App\Http\Requests\HelloRequest;
 use Closure;
 
-class HelloMiddleware
+class HamsterMiddleware
 {
     /**
      * Handle an incoming request.
@@ -16,10 +15,7 @@ class HelloMiddleware
      */
     public function handle($request, Closure $next)
     {
-echo "HelloMiddleware.php<br />";
-        $response = $next($request);
-
-	 return $response;
-
+	echo "HamsterMiddleware.php<br />";
+        return $next($request);
     }
 }
