@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use Illuminate\Http\Response;
 use Illuminate\Support\ServiceProvider;
 use Validator;
 use App\Http\Validators\HelloValidator;
@@ -26,6 +27,9 @@ class HelloServiceProvider extends ServiceProvider
     public function boot()
     {
 	echo "HelloServiceProvider.php<br />";
+
+
+	
            $validator = $this->app['validator'];
 	   $validator->resolver(function($translator, $data, 
 		  $rules, $messages) {
