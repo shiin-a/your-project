@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Middleware\HelloMiddleware;
+use App\Http\Middleware\HamsterMiddleware;
+use App\Http\Middleware\Dog;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,4 +18,5 @@ use Illuminate\Support\Facades\Route;
 echo "web.php<br />";
 Route::get('hello',  'HelloController@index');
 Route::post('hello',  'HelloController@post');
-
+Route::get('dog',  'HelloController@index');
+Route::get('hamster',  'HelloController@hamster');

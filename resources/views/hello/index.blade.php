@@ -3,7 +3,7 @@ echo "hello/index.blade.php";
 @endphp
 @extends('layouts.helloapp')
 
-@section('title', 'how to take care of hamster')
+@section('title', 'form')
 
 @section('introduction')
 	<p></p>
