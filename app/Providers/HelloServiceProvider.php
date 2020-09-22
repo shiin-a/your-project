@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use Illuminate\Support\Facades\View;
 use Illuminate\Http\Response;
 use Illuminate\Support\ServiceProvider;
 use Validator;
@@ -26,18 +27,15 @@ class HelloServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-	echo "HelloServiceProvider.php@boot()start<br />";
-
-
+	   //echo "HelloServiceProvider.php@boot()<br />";
+	   $validator = $this->app['validator'];
 	
- /**          $validator = $this->app['validator'];
-*	   $validator->resolver(function($translator, $data, 
-*		  $rules, $messages) {
-*	echo "HelloServiceProvider.php@boot()@validator->resolver<br />";
-*	       return new HelloValidator($translator, $data, 
-*		     $rules, $messages);
-*	   });
-*/
-	echo "HelloServiceProvider.php@boot()end<br />";
-    }
+      
+	$validator->resolver(function($translator, $data, 
+		  $rules, $messages) {
+	       return new HelloValidator($translator, $data, 
+		     $rules, $messages);
+	   });
+	
+     }
 }

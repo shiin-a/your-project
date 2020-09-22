@@ -1,59 +1,43 @@
 @php
 echo "hello/index.blade.php";
 @endphp
+
 @extends('layouts.helloapp')
 
-@section('title', 'form')
+@section('title', 'this is form')
 
-@section('introduction')
-	<p></p>
-@endsection
+@php
+echo $msg;
+@endphp
 
 @section('content')
-
-<p>{{$msg}}</p>
-@if (count($errors) > 0)
-<div>
-	<ul>
-		@foreach ($errors->all() as $error)
-			<li>{{ $error }}</li>
-		@endforeach
-	</ul>
-</div>
-@endif
-
-<form action="/hello" method="post">
-
-<table>
-
-    @csrf
-	@error('name')
-	  <p>error in 'name'</p>
-	@enderror
+	<p>{{$msg}}</p>
 
 
-    <tr><th>name: </th><td><input type="text" name="name">
 
-    </td></tr>
+	@if (count($errors) > 0)
+	<div>
+	    <ul>
+	 @foreach ($errors->all() as $error)
+	     <li>{{ $error }}</li>
+	 @endforeach
+	    </ul>
+	</div>
+  	 @endif
 
-    <tr><th>mail: </th><td><input type="text" name="mail">
-
-    </td></tr>
-
-	@error('age')
-	  <p>error in 'age'</p>
-	@enderror
-    <tr><th>age: </th><td><input type="text" name="age">
-
-    </td></tr>
-
-    <tr><th></th><td><input type="submit" value="send">
-
-    </td></tr>
-
-</form>
-
-</table>
-
+   <form action="/hello" method="post">
+   <table>
+       @csrf
+       <tr><th>name: </th><td><input type="text" 
+            name="name"></td></tr>
+       <tr><th>mail: </th><td><input type="text" 
+            name="mail"></td></tr>
+       <tr><th>age: </th><td><input type="text" 
+            name="age"></td></tr>
+       <tr><th></th><td><input type="submit" 
+            value="send"></td></tr>
+   </table>
+   </form>
 @endsection
+
 

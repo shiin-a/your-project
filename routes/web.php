@@ -18,5 +18,5 @@ use Illuminate\Support\Facades\Route;
 echo "web.php<br />";
 Route::get('hello',  'HelloController@index');
 Route::post('hello',  'HelloController@post');
-Route::get('dog',  'HelloController@index');
-Route::get('hamster',  'HelloController@hamster');
+Route::get('error',  'HelloController@error');
+

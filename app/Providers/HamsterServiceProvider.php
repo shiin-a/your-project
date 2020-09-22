@@ -2,6 +2,8 @@
 
 namespace App\Providers;
 
+
+use Illuminate\Support\Facades\View;
 use Illuminate\Support\ServiceProvider;
 
 class HamsterServiceProvider extends ServiceProvider
@@ -24,6 +26,10 @@ class HamsterServiceProvider extends ServiceProvider
     public function boot()
     {
 	echo "HamsterServiceProvider.php<br />";
-        //
+        View::composer(
+           'hello.index', function($view){
+               $view->with('view_message2', 'from Hamster Provider');
+           }
+       );
     }
 }
