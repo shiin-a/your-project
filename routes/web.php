@@ -16,6 +16,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 echo "web.php<br />";
+$router->get( '/_debugbar/assets/stylesheets', '\Barryvdh\Debugbar\Controllers\AssetController@css' );
+$router->get( '/_debugbar/assets/javascript', '\Barryvdh\Debugbar\Controllers\AssetController@js' );
+Route::get('/',  'HelloController@index');
 Route::get('hello',  'HelloController@index');
 Route::post('hello',  'HelloController@post');
 Route::get('error',  'HelloController@error');

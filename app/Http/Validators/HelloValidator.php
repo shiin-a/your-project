@@ -7,7 +7,7 @@ class HelloValidator extends Validator
 {
    public function validateHello($attribute, $value, $parameters)
    {
-       	return $value % 2 == 0;
+       return $value % 2 == 0;
    }
 
 }

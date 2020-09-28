@@ -27,15 +27,19 @@ class HelloServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-	   //echo "HelloServiceProvider.php@boot()<br />";
-	   $validator = $this->app['validator'];
-	
-      
-	$validator->resolver(function($translator, $data, 
-		  $rules, $messages) {
-	       return new HelloValidator($translator, $data, 
-		     $rules, $messages);
-	   });
+        echo "HelloServiceProvider.php@boot()<br />";
+        $validator = $this->app['validator'];
+        	
+        $validator->resolver(function($translator, $data, 
+        	  $rules, $messages) {
+		echo "wrap";
+
+               var_dump(new HelloValidator($translator, $data, 
+        	     $rules, $messages));
+
+		return new HelloValidator($translator, $data, 
+        	     $rules, $messages);
+        });
 	
      }
 }

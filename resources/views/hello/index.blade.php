@@ -5,39 +5,22 @@ echo "hello/index.blade.php";
 @extends('layouts.helloapp')
 
 @section('title', 'this is form')
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 
-@php
-echo $msg;
-@endphp
 
 @section('content')
-	<p>{{$msg}}</p>
-
-
-
-	@if (count($errors) > 0)
-	<div>
-	    <ul>
-	 @foreach ($errors->all() as $error)
-	     <li>{{ $error }}</li>
-	 @endforeach
-	    </ul>
-	</div>
-  	 @endif
-
-   <form action="/hello" method="post">
    <table>
-       @csrf
-       <tr><th>name: </th><td><input type="text" 
-            name="name"></td></tr>
-       <tr><th>mail: </th><td><input type="text" 
-            name="mail"></td></tr>
-       <tr><th>age: </th><td><input type="text" 
-            name="age"></td></tr>
-       <tr><th></th><td><input type="submit" 
-            value="send"></td></tr>
+   <tr><th>Name</th><th>Mail</th><th>Age</th></tr>
+   @foreach ($items as $item)
+       <tr>
+           <td>{{$item->name}}</td>
+           <td>{{$item->City}}</td>
+       </tr>
+   @endforeach
    </table>
-   </form>
 @endsection
 
 
